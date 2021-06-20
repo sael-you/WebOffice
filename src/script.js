@@ -24,7 +24,6 @@ const gui = new dat.GUI();
 /**
  * Models
  */
-const lightMap = new THREE.TextureLoader().load("/models/Office3D/Lightmap-0_comp_light.exr");
 
 const dracoLoader = new DRACOLoader();
 dracoLoader.setDecoderPath('/draco/');
@@ -50,17 +49,14 @@ let mixer = null;
 gltfLoader.load(
     '/models/3D_Assets_Ahmed/3D_Assets_Ahmed 1.gltf',
     (gltf) => {
-
-        gltf.scenes.forEach(obj => {
-            console.log(obj);
-        });
+        console.log(gltf);
+        // gltf.scenes.forEach(obj => {
+        //     console.log(obj);
+        // });
         // gltf.scene.position.y = 0.1;
         // gltf.scene.scale.set(0.01, 0.01, 0.01);
         // scene.add(gltf.scene);
 
-    },
-    () => {
-        console.log("loading");
     }
 )
 
