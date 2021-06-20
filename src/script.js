@@ -51,9 +51,12 @@ gltfLoader.load(
     '/models/3D_Assets_Ahmed/3D_Assets_Ahmed 1.gltf',
     (gltf) => {
 
-        gltf.scene.position.y = 0.1;
-        gltf.scene.scale.set(0.01, 0.01, 0.01);
-        scene.add(gltf.scene);
+        gltf.scenes.forEach(obj => {
+            console.log(obj);
+        });
+        // gltf.scene.position.y = 0.1;
+        // gltf.scene.scale.set(0.01, 0.01, 0.01);
+        // scene.add(gltf.scene);
 
     },
     () => {
