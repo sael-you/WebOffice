@@ -50,7 +50,7 @@ gltfLoader.load(
     '/models/3D_Assets_Ahmed/3D_Assets_Ahmed 1.gltf',
     (gltf) => {
 
-        gltf.scene.children[0].children[0].children.forEach(obj => {
+        gltf.scene.children[0].children[1].children.forEach(obj => {
             obj.position.y = 0.1;
             obj.scale.set(0.01, 0.01, 0.01);
             office.add(obj);
