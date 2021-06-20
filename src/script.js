@@ -45,18 +45,17 @@ gltfLoader.setDRACOLoader(dracoLoader);
 // );
 
 let mixer = null;
-
+let office = new THREE.Group();
 gltfLoader.load(
     '/models/3D_Assets_Ahmed/3D_Assets_Ahmed 1.gltf',
     (gltf) => {
-        console.log(gltf);
-        // gltf.scenes.forEach(obj => {
-        //     console.log(obj);
-        // });
-        // gltf.scene.position.y = 0.1;
-        // gltf.scene.scale.set(0.01, 0.01, 0.01);
-        // scene.add(gltf.scene);
 
+        gltf.scene.children[0].children[0].children.forEach(obj => {
+            obj.position.y = 0.1;
+            obj.scale.set(0.01, 0.01, 0.01);
+            office.add(obj);
+            scene.add(office);
+        });
     }
 )
 
